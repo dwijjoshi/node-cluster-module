@@ -1,0 +1,23 @@
+{
+  "name": "node-cluster-module",
+  "version": "1.0.0",
+  "description": "An npm package to run nodejs server on multiple cores using clusters",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwijjoshi/node-cluster-module.git"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "Dwij Joshi",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/dwijjoshi/node-cluster-module/issues"
+  },
+  "homepage": "https://github.com/dwijjoshi/node-cluster-module#readme"
+}
