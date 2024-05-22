@@ -1,4 +1,4 @@
-# node-cluster-manager
+# node-cluster-module
 
 An npm package designed to help you create clusters of Node.js applications. It enables your Node.js applications to handle concurrent requests more efficiently by utilizing the cluster module built into Node.js.
 
@@ -17,12 +17,12 @@ Install node-cluster-module with npm
   npm install node-cluster-module
 ```
 
-## Usage/Examples
+## Usage
 
 Make a js file in the root folder e.g. (cluster.js)
 
 ```javascript
-import { clusterify } from "node-cluster-module";
+const clusterify = require("node-cluster-module");
 ```
 
 Replace this code with the app.listen() code snippet:
@@ -32,6 +32,21 @@ clusterify(app, 3000);
 ```
 
 clusterify(app,port_number) : Your express app and port number.
+
+## Example
+
+```javascript
+const express = require("express");
+const clusterify = require("node-cluster-module");
+const port = 3000;
+const app = express();
+
+app.get("/test", (req, res) => {
+  res.send("This is a test API");
+});
+
+clusterify(app, port);
+```
 
 ## Feedback
 

@@ -1,7 +1,7 @@
-import cluster from "cluster";
-import os from "os";
+const cluster = require("cluster");
+const os = require("os");
 
-export function clusterify(app, port) {
+function clusterify(app, port) {
   // Check if the current process is primary or a worker
   if (cluster.isPrimary) {
     const numCPUs = os.cpus().length;
@@ -24,3 +24,5 @@ export function clusterify(app, port) {
     });
   }
 }
+
+module.exports = clusterify;
