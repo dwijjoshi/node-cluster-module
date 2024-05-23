@@ -48,6 +48,24 @@ app.get("/test", (req, res) => {
 clusterify(app, port);
 ```
 
+## Screenshots
+
+Terminal
+
+![App Screenshot](https://i.postimg.cc/NFVVBKS2/Terminal.jpg)
+
+Performance before clustering:
+
+![App Screenshot](https://i.postimg.cc/0yCTJyJF/Before.jpg)
+
+Here the total time for doing heavy and concurrent tasks is 14.198 s and the Mean latency is 7039.7 ms
+
+Performance after clustering:
+
+![App Screenshot](https://i.postimg.cc/Vks7pBdZ/After.jpg)
+
+Now the total time is reduced to 2.644 s and the Mean Latency is 1380.3 ms.
+
 ## Feedback
 
 If you have any feedback, you can reach out to me on dwijjoshi02@gmail.com
